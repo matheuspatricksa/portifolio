@@ -3,7 +3,7 @@
 <template>
   <nav>
     <ul class="flex gap-3 items-center">
-      <slot></slot>
+        <slot></slot>
     </ul>
   </nav>
 </template>
