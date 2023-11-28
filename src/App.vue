@@ -128,7 +128,7 @@ watch(darkMode, (mode) => {
             <Icon width="25" height="25" icon="mdi:instagram" />
           </a>
         </li>
-        <li class="cursor-pointer hover:text-gray-500" :class="darkMode ? 'hover:text-[#ff8ff5]' : 'hover:text-gray-200'">
+        <li class="cursor-pointer" :class="darkMode ? 'hover:text-[#ff8ff5]' : 'hover:text-gray-200'">
           <Icon v-if="!darkMode" @click="darkMode = !darkMode" width="25" height="25" icon="line-md:sun-rising-loop" />
           <Icon v-else width="25" @click="darkMode = !darkMode" height="25" icon="line-md:moon-alt-loop" />
         </li>
@@ -136,7 +136,7 @@ watch(darkMode, (mode) => {
     </header>
   <div class="h-screen flex justify-center flex-col relative">
     <main class="flex justify-center px-7 py-8">
-      <section class="w-1/4 h-1/4 flex flex-col gap-5">
+      <section class="w-1/4 h-1/4 flex flex-col gap-7">
         <h1 class="text-4xl	font-extrabold leading-10">Matheus Santos</h1>
         <p>Olá, seja bem vindo(a) ao meu portifólio.</p>
         <p>Sou um Desenvolvedor Front-end com expertise em transformar conceitos criativos em experiências web.
@@ -150,24 +150,24 @@ watch(darkMode, (mode) => {
         <div>
           <ul class="flex gap-3">
             <li>
-              <a class="flex items-center gap-1 cursor-pointer hover:text-gray-500" :class="darkMode ? 'hover:text-[#ff8ff5]' : 'hover:text-gray-200'"
+              <a class="flex items-center gap-1 cursor-pointer" :class="darkMode ? 'hover:text-[#ff8ff5]' : 'hover:text-gray-200'"
                 href="https://www.linkedin.com/in/bigmath/">
                 <Icon width="25" height="25" icon="mdi:linkedin" />Linkedin
               </a>
             </li>
             <li>
-              <a class="flex items-center gap-1 cursor-pointer hover:text-gray-500" :class="darkMode ? 'hover:text-[#ff8ff5]' : 'hover:text-gray-200'" href="https://github.com/bigmathdev">
+              <a class="flex items-center gap-1 cursor-pointer" :class="darkMode ? 'hover:text-[#ff8ff5]' : 'hover:text-gray-200'" href="https://github.com/bigmathdev">
                 <Icon width="25" height="25" icon="mdi:github" />GitHub
               </a>
             </li>
             <li>
-              <a class="flex items-center gap-1 cursor-pointer hover:text-gray-500" :class="darkMode ? 'hover:text-[#ff8ff5]' : 'hover:text-gray-200'"
+              <a class="flex items-center gap-1 cursor-pointer" :class="darkMode ? 'hover:text-[#ff8ff5]' : 'hover:text-gray-200'"
                 href="https://www.instagram.com/bigmath.dev">
                 <Icon width="25" height="25" icon="mdi:instagram" />Instagram
               </a>
             </li>
             <li>
-              <a class="flex items-center gap-1 cursor-pointer hover:text-gray-500" :class="darkMode ? 'hover:text-[#ff8ff5]' : 'hover:text-gray-200'" href="mailto:contato@bigmath.dev">
+              <a class="flex items-center gap-1 cursor-pointer" :class="darkMode ? 'hover:text-[#ff8ff5]' : 'hover:text-gray-200'" href="mailto:contato@bigmath.dev">
                 <Icon width="25" height="25" icon="mdi:email-outline" />E-mail
               </a>
             </li>
