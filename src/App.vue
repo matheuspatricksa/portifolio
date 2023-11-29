@@ -47,7 +47,7 @@ watch(darkMode, (mode) => {
           },
           onHover: {
             enable: false,
-            mode: 'repulse'
+            mode: 'grab'
           },
           resize: true
         },
@@ -83,7 +83,7 @@ watch(darkMode, (mode) => {
           enable: true,
           outMode: 'bounce',
           random: false,
-          speed: 1,
+          speed: 0.3,
           straight: true
         },
         number: {
@@ -111,7 +111,7 @@ watch(darkMode, (mode) => {
         <li class="cursor-pointer" :class="darkMode ? 'hover:text-[#ff8ff5]' : 'hover:text-gray-200'">Início</li>
         <li class="cursor-pointer" :class="darkMode ? 'hover:text-[#ff8ff5]' : 'hover:text-gray-200'">Projetos</li>
         <li class="cursor-pointer" :class="darkMode ? 'hover:text-[#ff8ff5]' : 'hover:text-gray-200'">
-          <a href="../public/Curriculo.pdf">Curriculo</a>
+          <a href="/Curriculo.pdf" target="_blank">Curriculo</a>
         </li>
         <li>
           <a class="cursor-pointer" :class="darkMode ? 'hover:text-[#ff8ff5]' : 'hover:text-gray-200'" href="https://www.linkedin.com/in/bigmath/">
