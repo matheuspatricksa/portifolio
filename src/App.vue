@@ -108,78 +108,83 @@ watch(darkMode, (mode) => {
       },
       detectRetina: true
     }" />
-    <div class="h-screen flex lg:justify-center items-center lg:flex-col absolute z-10">
-      <main class="flex justify-center lg:px-7 lg:py-8 ">
-        <section
-          class="flex flex-col text-center lg:text-left max-w-[80%] lg:max-w-[50%] 2xl:max-w-[35%] justify-center text-sm lg:text-base gap-1 movel-m:gap-5 pt-6 lg:pt-0 lg:gap-9 leading-loose">
-          <h1 class="text-xl lg:text-4xl font-extrabold lg:leading-10">Matheus Santos</h1>
-          <p>Olá, seja bem vindo(a) ao meu portifólio.</p>
-          <p>Sou um Desenvolvedor Front-end com expertise em transformar conceitos criativos em experiências web.
-            Meu foco principal é a utilização da linguagem JavaScript junto ao seus frameworks, Vue.js e Nuxt.js para criar
-            interfaces intuitivas e responsivas.</p>
-          <p>Fora do mundo da programação, você pode me encontrar na companhia das pessoas que eu amo, explorando novos
-            lugares e saboreando um cappuccino por aí. Tenho um estilo de vida minimalista, onde busco encontrar felicidade
-            na
-            simplicidade e valorizar as conexões com as pessoas.</p>
-          <p>Me encontre nas redes</p>
-          <div>
-            <ul class="flex lg:justify-start justify-center gap-3">
-              <li>
-                <a class="flex items-center gap-1 cursor-pointer"
-                  :class="darkMode ? 'hover:text-[#ff8ff5]' : 'hover:text-gray-200'"
-                  href="https://www.linkedin.com/in/bigmath/">
-                  <Icon width="25" height="25" icon="mdi:linkedin" />
-                  <span class="hidden lg:block">Linkedin</span>
-                </a>
-              </li>
-              <li>
-                <a class="flex items-center gap-1 cursor-pointer"
-                  :class="darkMode ? 'hover:text-[#ff8ff5]' : 'hover:text-gray-200'" href="https://github.com/bigmathdev">
-                  <Icon width="25" height="25" icon="mdi:github" />
-                  <span class="hidden lg:block">GitHub</span>
-                </a>
-              </li>
-              <li>
-                <a class="flex items-center gap-1 cursor-pointer"
-                  :class="darkMode ? 'hover:text-[#ff8ff5]' : 'hover:text-gray-200'"
-                  href="https://www.instagram.com/bigmath.dev">
-                  <Icon width="25" height="25" icon="mdi:instagram" />
-                  <span class="hidden lg:block">Instagram</span>
-                </a>
-              </li>
-              <li>
-                <a class="flex items-center gap-1 cursor-pointer"
-                  :class="darkMode ? 'hover:text-[#ff8ff5]' : 'hover:text-gray-200'" href="mailto:contato@bigmath.dev">
-                  <Icon width="25" height="25" icon="mdi:email-outline" />
-                  <span class="hidden lg:block">E-mail</span>
-                </a>
-              </li>
-            </ul>
-          </div>
-          <Footer class="text-gray-400 mt-6"
-            msg="Copyright © 2023 bigmath.dev. Todos os direitos reservados. Powered by: Matheus Santos" />
-        </section>
-      </main>
-    </div>
-    <menu class="absolute z-20 w-full min-h-[8%] flex items-center lg:hidden">
-      <Icon @click="menuHamburg = !menuHamburg" icon="line-md:menu" width="25" heigth="25" class="mx-10 cursor-pointer" />
-      <div v-if="menuHamburg" class="absolute z-30 w-screen h-screen bg-black opacity-50 top-0"></div>
-      <Transition enterActiveClass="animate-menu-translate-in" leaveActiveClass="animate-menu-translate-out">
-        <div v-if="menuHamburg" class="bg-[#1c222b] h-screen w-[50%] absolute z-40 top-0" >
-          <Icon @click="menuHamburg = !menuHamburg" icon="line-md:close-small" width="25" height="25" class="absolute right-5 top-5 cursor-pointer" />
-          <ul class="pl-10 pt-12 flex flex-col gap-5">
-            <li class="cursor-pointer" @click="console.log('clicou')">Inicio</li>
-            <li @click="console.log('clicou')">Projetos</li>
-            <li @click="console.log('clicou')">Currículo</li>
-            <li @click="console.log('clicou')">Linkedin</li>
-            <li @click="console.log('clicou')">GitHub</li>
-            <li @click="console.log('clicou')">Instagram</li>
-            <li @click="console.log('clicou')">E-mail</li>
+  <div class="h-screen w-screen flex lg:justify-center items-center lg:flex-col absolute z-10">
+    <main class="flex justify-center lg:px-7 lg:py-8 ">
+      <section
+        class="flex flex-col text-center lg:text-left max-w-[80%] lg:max-w-[50%] 2xl:max-w-[35%] justify-center text-sm lg:text-base gap-1 movel-m:gap-5 pt-6 lg:pt-0 lg:gap-9 leading-loose">
+        <h1 class="text-xl lg:text-4xl font-extrabold lg:leading-10">Matheus Santos</h1>
+        <p>Olá, seja bem vindo(a) ao meu portifólio.</p>
+        <p>Sou um Desenvolvedor Front-end com expertise em transformar conceitos criativos em experiências web.
+          Meu foco principal é a utilização da linguagem JavaScript junto ao seus frameworks, Vue.js e Nuxt.js para criar
+          interfaces intuitivas e responsivas.</p>
+        <p>Fora do mundo da programação, você pode me encontrar na companhia das pessoas que eu amo, explorando novos
+          lugares e saboreando um cappuccino por aí. Tenho um estilo de vida minimalista, onde busco encontrar felicidade
+          na
+          simplicidade e valorizar as conexões com as pessoas.</p>
+        <p>Me encontre nas redes</p>
+        <div>
+          <ul class="flex lg:justify-start justify-center gap-3">
+            <li>
+              <a class="flex items-center gap-1 cursor-pointer"
+                :class="darkMode ? 'hover:text-[#ff8ff5]' : 'hover:text-gray-200'"
+                href="https://www.linkedin.com/in/bigmath/">
+                <Icon width="25" height="25" icon="mdi:linkedin" />
+                <span class="hidden lg:block">Linkedin</span>
+              </a>
+            </li>
+            <li>
+              <a class="flex items-center gap-1 cursor-pointer"
+                :class="darkMode ? 'hover:text-[#ff8ff5]' : 'hover:text-gray-200'" href="https://github.com/bigmathdev">
+                <Icon width="25" height="25" icon="mdi:github" />
+                <span class="hidden lg:block">GitHub</span>
+              </a>
+            </li>
+            <li>
+              <a class="flex items-center gap-1 cursor-pointer"
+                :class="darkMode ? 'hover:text-[#ff8ff5]' : 'hover:text-gray-200'"
+                href="https://www.instagram.com/bigmath.dev">
+                <Icon width="25" height="25" icon="mdi:instagram" />
+                <span class="hidden lg:block">Instagram</span>
+              </a>
+            </li>
+            <li>
+              <a class="flex items-center gap-1 cursor-pointer"
+                :class="darkMode ? 'hover:text-[#ff8ff5]' : 'hover:text-gray-200'" href="mailto:contato@bigmath.dev">
+                <Icon width="25" height="25" icon="mdi:email-outline" />
+                <span class="hidden lg:block">E-mail</span>
+              </a>
+            </li>
           </ul>
         </div>
-      </Transition>
-    </menu>
-  <header class="absolute right-0 px-7 py-8 hidden lg:block">
+        <Footer class="text-gray-400 mt-6"
+          msg="Copyright © 2023 bigmath.dev. Todos os direitos reservados. Powered by: Matheus Santos" />
+      </section>
+    </main>
+  </div>
+  <menu class="absolute z-20 w-full min-h-[8%] flex items-center lg:hidden">
+    <Icon @click="menuHamburg = !menuHamburg" icon="line-md:menu" width="25" heigth="25" class="mx-10 cursor-pointer" />
+    <div v-if="menuHamburg" class="absolute z-30 w-screen h-screen bg-black opacity-50 top-0"></div>
+    <Transition enterActiveClass="animate-menu-translate-in" leaveActiveClass="animate-menu-translate-out">
+      <div v-if="menuHamburg" class="bg-[#1c222b] h-screen w-[50%] absolute z-40 top-0" :class="!darkMode ? 'bg-white' : ''">
+        <Icon @click="menuHamburg = !menuHamburg" icon="line-md:close-small" width="25" height="25"
+          class="absolute right-5 top-5 cursor-pointer" />
+        <ul class="pl-10 pt-12 flex flex-col gap-5">
+          <li class="cursor-pointer" @click="console.log('clicou')">Inicio</li>
+          <li @click="console.log('clicou')">Projetos</li>
+          <li @click="console.log('clicou')">Currículo</li>
+          <li @click="console.log('clicou')">Linkedin</li>
+          <li @click="console.log('clicou')">GitHub</li>
+          <li @click="console.log('clicou')">Instagram</li>
+          <li @click="console.log('clicou')">E-mail</li>
+        </ul>
+        <div class="absolute bottom-5 right-5">
+          <Icon v-if="!darkMode" @click="darkMode = !darkMode" width="25" height="25" icon="line-md:sun-rising-loop" />
+          <Icon v-else width="25" @click="darkMode = !darkMode" height="25" icon="line-md:moon-alt-loop" />
+        </div>
+      </div>
+    </Transition>
+  </menu>
+  <header class="absolute z-20 right-0 px-7 py-8 hidden lg:block">
     <Navbar>
       <li class="cursor-pointer" :class="darkMode ? 'hover:text-[#ff8ff5]' : 'hover:text-gray-200'">Início</li>
       <li class="cursor-pointer" :class="darkMode ? 'hover:text-[#ff8ff5]' : 'hover:text-gray-200'">Projetos</li>
