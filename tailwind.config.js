@@ -31,8 +31,8 @@ export default {
         }
       },
       animation: {
-        'menu-translate-in': 'menu-in 1s ease-in-out',
-        'menu-translate-out': 'menu-out 1s ease-in-out'
+        'menu-translate-in': 'menu-in 0.5s ease-in',
+        'menu-translate-out': 'menu-out 0.5s ease-in-out'
       }
     },
   },
