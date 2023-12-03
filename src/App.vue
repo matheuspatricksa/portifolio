@@ -108,7 +108,7 @@ watch(darkMode, (mode) => {
       },
       detectRetina: true
     }" />
-  <div class="h-screen flex lg:justify-center items-center lg:flex-col absolute z-10">
+  <div class="h-screen w-screen flex lg:justify-center items-center lg:flex-col absolute z-10">
     <main class="flex justify-center lg:px-7 lg:py-8 ">
       <section
         class="flex flex-col text-center lg:text-left max-w-[80%] lg:max-w-[50%] 2xl:max-w-[35%] justify-center text-sm lg:text-base gap-1 movel-m:gap-5 pt-6 lg:pt-0 lg:gap-9 leading-loose">
@@ -184,7 +184,7 @@ watch(darkMode, (mode) => {
       </div>
     </Transition>
   </menu>
-  <header class="absolute right-0 px-7 py-8 hidden lg:block">
+  <header class="absolute z-20 right-0 px-7 py-8 hidden lg:block">
     <Navbar>
       <li class="cursor-pointer" :class="darkMode ? 'hover:text-[#ff8ff5]' : 'hover:text-gray-200'">Início</li>
       <li class="cursor-pointer" :class="darkMode ? 'hover:text-[#ff8ff5]' : 'hover:text-gray-200'">Projetos</li>
