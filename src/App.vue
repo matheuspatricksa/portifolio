@@ -114,10 +114,11 @@ watch(darkMode, (mode) => {
     }" />
   <div class="h-screen w-screen flex justify-center items-center lg:flex-col absolute z-10">
     <router-view></router-view>
-    <Footer class="text-gray-600 text-xs md:py-10 absolute bottom-0 text-center py-2 px-4" :class="darkMode ? 'text-gray-600' : 'text-gray-200'"
+    <Footer class="text-gray-600 text-xs md:py-10 absolute bottom-0 text-center py-2 px-4"
+      :class="darkMode ? 'text-gray-600' : 'text-gray-200'"
       msg="Copyright © 2023 bigmath.dev. Todos os direitos reservados. Powered by: Matheus Santos" />
   </div>
-  <MenuMobile :darkMode="darkMode" @darkMode="updateDarkMode"/>
+  <MenuMobile @dark="updateDarkMode" :dark-mode="darkMode" />
   <header class="absolute z-20 right-0 px-7 py-8 hidden lg:block">
     <Navbar>
     </Navbar>
