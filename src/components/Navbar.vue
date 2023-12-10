@@ -1,5 +1,12 @@
 <script setup>
+import { ref } from 'vue'
 import { Icon } from '@iconify/vue';
+
+const props = defineProps({
+  darkMode: Boolean
+})
+
+const emit = defineEmits(['dark'])
 </script>
 
 <template>
@@ -26,8 +33,8 @@ import { Icon } from '@iconify/vue';
         </a>
       </li>
       <li class="cursor-pointer" :class="darkMode ? 'hover:text-[#ff8ff5]' : 'hover:text-gray-200'">
-        <Icon v-if="!darkMode" @click="darkMode = !darkMode" width="25" height="25" icon="line-md:sun-rising-loop" />
-        <Icon v-else width="25" @click="darkMode = !darkMode" height="25" icon="line-md:moon-alt-loop" />
+        <Icon v-if="!darkMode" @click="emit('dark', true)" width="25" height="25" icon="line-md:sun-rising-loop" />
+        <Icon v-else width="25" @click="emit('dark', false)" height="25" icon="line-md:moon-alt-loop" />
       </li>
     </ul>
   </nav>

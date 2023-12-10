@@ -1,11 +1,16 @@
 import { createWebHistory, createRouter } from 'vue-router'
 
 const routes = [
+
   {
   path: '/',
   name: 'HomeView',
   component: () => import('../views/HomeView.vue'),
+  // props: {
+  //   darkMode: true
+  // }
   },
+
   {
   path: '/projetos',
   name: 'projetos',

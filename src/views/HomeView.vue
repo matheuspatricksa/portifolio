@@ -1,5 +1,13 @@
 <script setup>
 import { Icon } from '@iconify/vue';
+
+const props = defineProps({
+  darkMode: {
+    type: Boolean,
+    required: true
+  }
+})
+
 </script>
 
 <template>

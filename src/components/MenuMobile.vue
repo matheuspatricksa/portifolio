@@ -8,7 +8,7 @@ const props = defineProps({
   darkMode: Boolean
 })
 
-const emit = defineEmits(['teste'])
+const emit = defineEmits(['dark'])
 
 </script>
 
