@@ -1,21 +1,47 @@
-<script setup></script>
+<script setup>
+
+const props = defineProps({
+  darkMode: {
+    type: Boolean,
+    required: true
+  }
+})
+
+</script>
 
 <template>
-  <div>
-    <h1>Projetos listados em breve</h1>
-
-    <ul>
-      <li><a href="https://bigmathdev.github.io/treine-me/">Site estático</a></li>
-      <li><a href="https://bigmathdev.github.io/space-cream-responsive-element/">Space Cream - Site responsivo</a></li>
-      <li><a href="https://bigmathdev.github.io/responsive-element/">Trabalhos - Mobile first</a></li>
-      <li><a href="https://bigmathdev.github.io/prototype-weather-api/">Protótipo APP Clima</a></li>
-      <li></li>
-      <li></li>
-      <li></li>
-      <li></li>
-      <li></li>
-      <li></li>
-    </ul>
+  <div class="flex flex-col gap-10">
+    <h1 class="text-xl text-center font-bold lg:text-4xl">Projetos</h1>
+    <div class="flex flex-col gap-2">
+      <h2 class="text-lg font-bold">Estático</h2>
+      <ul class="md:flex md:gap-5">
+        <li class="cursor-pointer" :class="darkMode ? 'hover:text-[#ff8ff5]' : 'hover:text-gray-200'"><a href="https://bigmathdev.github.io/treine-me/">Treine-me</a></li>
+        <li class="cursor-pointer" :class="darkMode ? 'hover:text-[#ff8ff5]' : 'hover:text-gray-200'"><a href="https://bigmathdev.github.io/static-login-form/">Login</a></li>
+      </ul>
+    </div>
+    <div class="flex flex-col gap-2">
+      <h2 class="text-lg font-bold">Consumo de API</h2>
+      <ul class="md:flex md:gap-5">
+        <li class="cursor-pointer" :class="darkMode ? 'hover:text-[#ff8ff5]' : 'hover:text-gray-200'"><a href="https://bigmathdev.github.io/prototype-weather-api/">Protótipo APP Clima</a></li>
+        <li class="cursor-pointer" :class="darkMode ? 'hover:text-[#ff8ff5]' : 'hover:text-gray-200'"><a href="https://bigmathdev.github.io/store/">Store</a></li>
+      </ul>
+    </div>
+    <div class="flex flex-col gap-2">
+      <h2 class="text-lg font-bold">Mobile First e Responsividade</h2>
+      <ul class="md:flex md:gap-5">
+        <li class="cursor-pointer" :class="darkMode ? 'hover:text-[#ff8ff5]' : 'hover:text-gray-200'"><a href="https://bigmathdev.github.io/space-cream-responsive-element/">Space Cream</a></li>
+        <li class="cursor-pointer" :class="darkMode ? 'hover:text-[#ff8ff5]' : 'hover:text-gray-200'"><a href="https://bigmathdev.github.io/responsive-element/">Elementos Responsivos</a></li>
+      </ul>
+    </div>
+    <div class="flex flex-col gap-2">
+      <h2 class="text-lg font-bold">Diversos</h2>
+      <ul class="md:flex md:gap-5">
+        <li class="cursor-pointer" :class="darkMode ? 'hover:text-[#ff8ff5]' : 'hover:text-gray-200'"><a href="https://bigmathdev.github.io/focus-timer/">Focus Timer - Pomodoro</a></li>
+        <li class="cursor-pointer" :class="darkMode ? 'hover:text-[#ff8ff5]' : 'hover:text-gray-200'"><a href="https://bigmathdev.github.io/form-event/">Formulário Customizado</a></li>
+        <li class="cursor-pointer" :class="darkMode ? 'hover:text-[#ff8ff5]' : 'hover:text-gray-200'"><a href="https://bigmathdev.github.io/simple-color-flipper/hexadecimal.html">Color flipper</a></li>
+        <li class="cursor-pointer" :class="darkMode ? 'hover:text-[#ff8ff5]' : 'hover:text-gray-200'"><a href="https://bigmathdev.github.io/band-members/">Band Members</a></li>
+      </ul>
+    </div>
   </div>
 </template>
 
