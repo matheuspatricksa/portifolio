@@ -22,7 +22,7 @@ const props = defineProps({
     <div class="flex flex-col gap-2">
       <h2 class="text-lg font-bold">Consumo de API</h2>
       <ul class="md:flex md:gap-5">
-        <li class="cursor-pointer" :class="darkMode ? 'hover:text-[#ff8ff5]' : 'hover:text-gray-200'"><a href="https://bigmathdev.github.io/prototype-weather-api/">Protótipo APP Clima</a></li>
+        <li class="cursor-pointer" :class="darkMode ? 'hover:text-[#ff8ff5]' : 'hover:text-gray-200'"><a href="https://bigmathdev.github.io/weather/">Weather (Recente)</a></li>
         <li class="cursor-pointer" :class="darkMode ? 'hover:text-[#ff8ff5]' : 'hover:text-gray-200'"><a href="https://bigmathdev.github.io/store/">Store</a></li>
       </ul>
     </div>
