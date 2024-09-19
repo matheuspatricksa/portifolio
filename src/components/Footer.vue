@@ -1,14 +1,12 @@
-<script setup>
-defineProps({
-  msg: {
-    type: String,
-    default: ''
-  }
-})
-</script>
-
 <template>
-  <footer>{{ msg }}</footer>
+  <footer>{{ props.msg }}</footer>
 </template>
 
-<style scoped></style>
+<script setup>
+const props = defineProps({
+  msg: {
+    type: String,
+    default: '',
+  },
+})
+</script>
