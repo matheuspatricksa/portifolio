@@ -12,6 +12,8 @@ const pinia = createPinia()
 window.axios = axios
 
 axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest'
+axios.defaults.withCredentials = true
+axios.defaults.withXSRFToken = true
 // axios.defaults.baseURL = 'http://127.0.0.1:8000/api';
 
 if (localStorage.getItem('token')) {
@@ -20,7 +22,15 @@ if (localStorage.getItem('token')) {
 }
 
 axios.interceptors.response.use(
-  (response) => response,
+  (response) => {
+    const tokenXSRF = document.cookie.split(';').find(row => row.startsWith('XSRF-TOKEN='))?.split('=')[1]
+
+    if (tokenXSRF) {
+      response.headers['X-XSRF-TOKEN'] = decodeURIComponent(tokenXSRF)
+    }
+
+    return response
+  },
   (error) => {
     if (error.response?.status === 401) {
       localStorage.removeItem('token')
