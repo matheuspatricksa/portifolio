@@ -2,10 +2,10 @@
 export default {
   content: ['./index.html', './src/**/*.{vue,js,ts,jsx,tsx}'],
   theme: {
-    fontFamily: {
-      inter: ['Inter', 'sans-serif'],
-    },
     extend: {
+      fontFamily: {
+        inter: ['Inter', 'sans-serif'],
+      },
       screens: {
         'movel-m': '375px',
       },
@@ -33,5 +33,4 @@ export default {
       },
     },
   },
-  // plugins: [require('daisyui')],
 }

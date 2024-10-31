@@ -1,10 +1,16 @@
 <template>
   <div class="flex items-center overflow-hidden rounded-md border">
     <input type="file" id="fileInput" @change="onFilesChanges" class="hidden" />
-    <label for="fileInput" class="min-w-32 bg-gray-500 px-2 py-3">
+    <label
+      for="fileInput"
+      class="bg-gray-400 px-2 py-3 text-xs text-white sm:text-base"
+    >
       {{ props.label }}
     </label>
-    <span class="truncate px-2 py-3">{{ changeName }}</span>
+    <span
+      class="w-44 truncate px-2 py-3 text-center text-xs sm:w-80 sm:text-base"
+      >{{ changeName }}</span
+    >
   </div>
 </template>
 

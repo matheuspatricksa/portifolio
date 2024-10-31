@@ -1,25 +1,27 @@
 <template>
-  <div class="w-96">
+  <div class="z-10">
     <figure>
       <img
-        class="rounded-t-2xl"
+        class="aspect-[4/3] rounded-t-2xl object-cover"
         :src="`${backendImageURL}${project.imagem}`"
         alt=""
       />
     </figure>
     <main
-      class="flex flex-col gap-2 rounded-b-2xl bg-transparent p-8 shadow-2xl shadow-black backdrop-blur-[1px]"
+      class="flex flex-col gap-2 rounded-b-2xl bg-transparent p-6 shadow-2xl shadow-black backdrop-blur-[1px]"
     >
-      <h2 class="text-xl font-bold">{{ props.project.nome }}</h2>
-      <p class="text-sm">{{ props.project.descricao }}</p>
+      <h2 class="truncate text-lg font-bold">{{ props.project.nome }}</h2>
+      <p class="h-20 overflow-auto text-sm">{{ props.project.descricao }}</p>
       <div class="flex items-center justify-end gap-3">
         <a
           :href="props.project.repositorio"
-          class="rounded-md p-2 outline outline-1"
+          class="rounded-md p-2 text-sm outline outline-1"
           >Repositorio</a
         >
-        <a :href="props.project.deploy" class="rounded-md p-2 outline outline-1"
-          >Projeto online</a
+        <a
+          :href="props.project.deploy"
+          class="rounded-md p-2 text-sm outline outline-1"
+          >Deploy</a
         >
       </div>
       <div class="mt-2 flex justify-end">

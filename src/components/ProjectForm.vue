@@ -1,5 +1,5 @@
 <template>
-  <FormWrapper placeholder="Adicionar projeto" :submitEvent="sendProject">
+  <FormWrapper placeholder="Enviar projeto" :submitEvent="sendProject">
     <InputComponent
       type="text"
       label="Nome do projeto"

@@ -1,8 +1,14 @@
 <template>
-  <div class="flex flex-col gap-10">
+  <div>
     <h1 class="text-center text-xl font-bold lg:text-4xl">Projetos</h1>
-    <div class="flex gap-3">
-      <div v-if="projects" v-for="project in projects.data">
+    <div
+      class="grid grid-cols-1 gap-6 p-6 py-10 md:grid-cols-2 2xl:grid-cols-3"
+    >
+      <div
+        v-if="projects"
+        v-for="project in projects.data"
+        class="flex max-w-sm justify-center"
+      >
         <ProjectPresentationCard :project="project" />
       </div>
     </div>

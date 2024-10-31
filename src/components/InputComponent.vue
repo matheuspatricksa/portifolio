@@ -1,8 +1,10 @@
 <template>
   <div class="flex flex-col gap-2">
-    <label :for="props.id">{{ props.label }}</label>
+    <label class="text-xs sm:text-base" :for="props.id">{{
+      props.label
+    }}</label>
     <input
-      class="w-72 rounded-md border bg-transparent px-2 py-3 max-md:w-52 max-sm:w-36"
+      class="rounded-md border bg-transparent px-2 py-3 text-xs sm:text-base"
       :type="props.type"
       :id="props.id"
       :required="props.required"

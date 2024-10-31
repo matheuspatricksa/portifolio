@@ -23,7 +23,10 @@ if (localStorage.getItem('token')) {
 
 axios.interceptors.response.use(
   (response) => {
-    const tokenXSRF = document.cookie.split(';').find(row => row.startsWith('XSRF-TOKEN='))?.split('=')[1]
+    const tokenXSRF = document.cookie
+      .split(';')
+      .find((row) => row.startsWith('XSRF-TOKEN='))
+      ?.split('=')[1]
 
     if (tokenXSRF) {
       response.headers['X-XSRF-TOKEN'] = decodeURIComponent(tokenXSRF)
