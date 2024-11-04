@@ -11,7 +11,7 @@ export const useAuthPortifolio = defineStore('AuthPortifolio', () => {
   const authLogin = async (form) => {
     try {
       const formResponse = await axios.post(
-        'http://api.bigmath.dev/api/login',
+        'https://api-portifolio.fly.dev/api/login',
         form
       )
       localStorage.setItem('token', formResponse.data.token)
@@ -25,7 +25,7 @@ export const useAuthPortifolio = defineStore('AuthPortifolio', () => {
   }
 
   const signOut = () => {
-    axios.post('http://api.bigmath.dev/api/logout').finally(() => {
+    axios.post('https://api-portifolio.fly.dev/api/logout').finally(() => {
       localStorage.removeItem('token')
       axios.defaults.headers.common['Authorization'] = 'Bearer'
       isLoggedIn.value = false

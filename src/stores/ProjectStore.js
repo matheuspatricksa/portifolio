@@ -6,7 +6,7 @@ export const useProjectStore = defineStore('ProjectStore', () => {
 
   const getProjects = async () => {
     await axios
-      .get('http://api.bigmath.dev/api/projects')
+      .get('https://api-portifolio.fly.dev/api/projects')
       .then((response) => {
         projects.value = response.data
       })
@@ -18,7 +18,7 @@ export const useProjectStore = defineStore('ProjectStore', () => {
   const submitProject = (form) => {
     axios
       .post(
-        'http://api.bigmath.dev/api/projects',
+        'https://api-portifolio.fly.dev/api/projects',
 
         {
           nome: form.nome,
