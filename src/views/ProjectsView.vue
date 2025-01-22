@@ -1,13 +1,12 @@
 <template>
   <div>
     <div v-if="projects"
-      v-for="project in projects.data"
     >
       <h1 class="text-center text-xl font-bold lg:text-4xl">Projetos</h1>
       <div 
         class="grid grid-cols-1 gap-6 p-6 py-10 md:grid-cols-2 2xl:grid-cols-3"
       >
-        <div
+        <div v-for="project in projects.data" :key="project.id"
           class="flex max-w-sm justify-center"
         >
           <ProjectPresentationCard :project="project" />
