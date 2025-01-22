@@ -1,17 +1,20 @@
 <template>
   <div>
-    <h1 class="text-center text-xl font-bold lg:text-4xl">Projetos</h1>
-    <div
-      class="grid grid-cols-1 gap-6 p-6 py-10 md:grid-cols-2 2xl:grid-cols-3"
+    <div v-if="projects"
+      v-for="project in projects.data"
     >
-      <div
-        v-if="projects"
-        v-for="project in projects.data"
-        class="flex max-w-sm justify-center"
+      <h1 class="text-center text-xl font-bold lg:text-4xl">Projetos</h1>
+      <div 
+        class="grid grid-cols-1 gap-6 p-6 py-10 md:grid-cols-2 2xl:grid-cols-3"
       >
-        <ProjectPresentationCard :project="project" />
+        <div
+          class="flex max-w-sm justify-center"
+        >
+          <ProjectPresentationCard :project="project" />
+        </div>
       </div>
     </div>
+    <div v-else class="flex h-full justify-center items-center">Carregando projetos... Aguarde!</div>
   </div>
 </template>
 
