@@ -20,14 +20,17 @@
 <script setup>
 import { onMounted } from 'vue'
 import { storeToRefs } from 'pinia'
-import { useProjectStore } from '../stores/ProjectStore'
-
 import ProjectPresentationCard from '../components/ProjectPresentationCard.vue'
+// import { useProjectStore } from '../stores/ProjectStore'
 
-const projectsStore = useProjectStore()
+// const projectsStore = useProjectStore()
 
-const { projects } = storeToRefs(projectsStore)
-const { getProjects } = projectsStore
+// const { projects } = storeToRefs(projectsStore)
+// const { getProjects } = projectsStore
+
+import { useGetRepos } from '../stores/GetRepos';
+
+const { getRepos } = useGetRepos();
 
 const props = defineProps({
   darkMode: {
@@ -36,5 +39,5 @@ const props = defineProps({
   },
 })
 
-onMounted(getProjects)
+onMounted(getRepos);
 </script>
