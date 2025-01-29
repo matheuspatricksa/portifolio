@@ -1,15 +1,15 @@
 <template>
   <div>
-    <div v-if="projects"
+    <div v-if="repos"
     >
       <h1 class="text-center text-xl font-bold lg:text-4xl">Projetos</h1>
       <div 
         class="grid grid-cols-1 gap-6 p-6 py-10 md:grid-cols-2 2xl:grid-cols-3"
       >
-        <div v-for="project in projects.data" :key="project.id"
+        <div v-for="repo in repos" :key="repo.id"
           class="flex max-w-sm justify-center"
         >
-          <ProjectPresentationCard :project="project" />
+          <ProjectPresentationCard :project="repo" />
         </div>
       </div>
     </div>
@@ -21,16 +21,11 @@
 import { onMounted } from 'vue'
 import { storeToRefs } from 'pinia'
 import ProjectPresentationCard from '../components/ProjectPresentationCard.vue'
-// import { useProjectStore } from '../stores/ProjectStore'
-
-// const projectsStore = useProjectStore()
-
-// const { projects } = storeToRefs(projectsStore)
-// const { getProjects } = projectsStore
-
 import { useGetRepos } from '../stores/GetRepos';
 
-const { getRepos } = useGetRepos();
+const getReposStore = useGetRepos()
+const { repos } = storeToRefs(getReposStore)
+const { getRepos } = getReposStore
 
 const props = defineProps({
   darkMode: {
@@ -39,5 +34,9 @@ const props = defineProps({
   },
 })
 
-onMounted(getRepos);
+onMounted(() => {
+  setTimeout(() => {
+    getRepos()
+  }, 2000);
+});
 </script>
