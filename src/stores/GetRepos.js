@@ -10,7 +10,7 @@ export const useGetRepos = defineStore('GetRepos', () => {
 
   const getRepos = async () => {
     try {
-      const response = await axios.get(`http://api.github.com/users/${username}/repos`);
+      const response = await axios.get(`https://api.github.com/users/${username}/repos`);
 
       const data = response.data;
       repos.value = data.filter(repo => selectedRepos.includes(repo.name));
