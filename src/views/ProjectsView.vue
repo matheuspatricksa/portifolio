@@ -1,14 +1,9 @@
 <template>
   <div>
-    <div v-if="repos"
-    >
+    <div v-if="repos.length">
       <h1 class="text-center text-xl font-bold lg:text-4xl">Projetos</h1>
-      <div 
-        class="grid grid-cols-1 gap-6 p-6 py-10 md:grid-cols-2 2xl:grid-cols-3"
-      >
-        <div v-for="repo in repos" :key="repo.id"
-          class="flex max-w-sm justify-center"
-        >
+      <div class="grid grid-cols-1 gap-6 p-6 py-10 md:grid-cols-2 2xl:grid-cols-3">
+        <div v-for="repo in repos" :key="repo.id" class="flex max-w-sm justify-center">
           <ProjectPresentationCard :project="repo" />
         </div>
       </div>
@@ -35,8 +30,6 @@ const props = defineProps({
 })
 
 onMounted(() => {
-  setTimeout(() => {
-    getRepos()
-  }, 2000);
+  getRepos()
 });
 </script>

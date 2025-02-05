@@ -1,12 +1,12 @@
 <template>
   <div class="z-10">
-    <!-- <figure>
+    <figure>
       <img
         class="aspect-[4/3] rounded-t-2xl object-cover"
-        :src="`${backendImageURL}${project.imagem}`"
+        :src="`../src/assets/img/${props.project.name}.png`"
         alt=""
       />
-    </figure> -->
+    </figure>
     <main
       class="flex flex-col gap-2 rounded-b-2xl bg-transparent p-6 shadow-2xl shadow-black backdrop-blur-[1px]"
     >
