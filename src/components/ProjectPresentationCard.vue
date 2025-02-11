@@ -3,7 +3,7 @@
     <figure>
       <img
         class="aspect-[4/3] rounded-t-2xl object-cover"
-        :src="`../src/assets/img/${props.project.name}.png`"
+        :src="`/img/${props.project.name}.png`"
         alt=""
       />
     </figure>
