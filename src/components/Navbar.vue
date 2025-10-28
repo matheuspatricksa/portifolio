@@ -16,18 +16,18 @@
       <li v-if="isLoggedIn">
         <button @click="signOut">Sair</button>
       </li>
-      <li
+      <!-- <li
         v-else
         class="cursor-pointer"
         :class="isDark ? 'hover:text-[#ff8ff5]' : 'hover:text-gray-200'"
       >
         <router-link to="login">Acesso</router-link>
-      </li>
+      </li> -->
       <li>
         <a
           class="cursor-pointer"
           :class="isDark ? 'hover:text-[#ff8ff5]' : 'hover:text-gray-200'"
-          href="https://www.linkedin.com/in/matheuspatrick/"
+          href="https://www.linkedin.com/in/bigmathdev/"
         >
           <Icon width="25" height="25" icon="mdi:linkedin" />
         </a>
